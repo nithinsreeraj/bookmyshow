@@ -1,4 +1,4 @@
-package com.microservices.bookmyshow.premierecatalogueservice.dto;
+package com.microservices.bookmyshow.theatrecatalogueservice.dto;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ public class ShowTimings {
 	
 	private int theatreId;
 	private String theatreName;
-	private List<Shows> shows;
+	private List<Show> shows;
 	
 	public int getTheatreId() {
 		return theatreId;
@@ -20,10 +20,10 @@ public class ShowTimings {
 	public void setTheatreName(String theatreName) {
 		this.theatreName = theatreName;
 	}
-	public List<Shows> getShows() {
+	public List<Show> getShows() {
 		return shows;
 	}
-	public void setShows(List<Shows> shows) {
+	public void setShows(List<Show> shows) {
 		this.shows = shows;
 	}
 

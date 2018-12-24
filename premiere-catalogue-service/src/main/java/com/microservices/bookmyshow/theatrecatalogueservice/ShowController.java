@@ -1,12 +1,13 @@
-package com.microservices.bookmyshow.premierecatalogueservice;
+package com.microservices.bookmyshow.theatrecatalogueservice;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microservices.bookmyshow.premierecatalogueservice.dto.ShowFilterDTO;
-import com.microservices.bookmyshow.premierecatalogueservice.dto.ShowTimings;
+import com.microservices.bookmyshow.theatrecatalogueservice.dto.ShowFilterDTO;
+import com.microservices.bookmyshow.theatrecatalogueservice.dto.ShowTimings;
+
 
 @RestController
 public class ShowController {

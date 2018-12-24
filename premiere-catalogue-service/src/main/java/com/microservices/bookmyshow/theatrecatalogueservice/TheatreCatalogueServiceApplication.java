@@ -1,13 +1,13 @@
-package com.microservices.bookmyshow.premierecatalogueservice;
+package com.microservices.bookmyshow.theatrecatalogueservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PremiereCatalogueServiceApplication {
+public class TheatreCatalogueServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PremiereCatalogueServiceApplication.class, args);
+		SpringApplication.run(TheatreCatalogueServiceApplication.class, args);
 	}
 
 }

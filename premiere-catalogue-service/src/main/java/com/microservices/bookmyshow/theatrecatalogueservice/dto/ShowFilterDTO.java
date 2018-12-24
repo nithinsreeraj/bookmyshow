@@ -1,4 +1,4 @@
-package com.microservices.bookmyshow.premierecatalogueservice.dto;
+package com.microservices.bookmyshow.theatrecatalogueservice.dto;
 
 public class ShowFilterDTO {
 	
