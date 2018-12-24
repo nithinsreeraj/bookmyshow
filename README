@@ -1,20 +1,19 @@
 List of microservices and port configurations are mentioned here for easy start.
 
-1.	Login service*  - 8000
-2.	Movie Catalogue Service* - 8080, 8081.. 
-3.	Premiere Catalogue Service* - 8100, 8101..
-4.	Booking Service* - 8200, 8201..
-5.	Payment Service* - 8300, 8301..
-6.	Rating Calculation Service: 8400
-7.	Wallet Service - 8500
-8.	User Details Service* - 8600
-9.	Movie Reviews Service - 
-10.	Notifications Service  - 8800
+1.	Login service*  - 8000 -> Jithin, Arathy, Anand
+2.	Movie Catalogue Service* - 8080, 8081.. -> Gopika, Arun
+3.	Premiere Catalogue Service* - 8100, 8101.. -> Nithin, Gautham
+4.	Booking Service* - 8200, 8201.. -> Nithin, Gautham  
+5.	Payment Service* - 8300, 8301.. -> Nithin, Gautham
+6.	Rating Calculation Service: 8400 - Gopika, Arun
+7.	Wallet Service - 8500 - Gopika, Arun
+9.	Movie Reviews Service - Gopika, Arun
+10.	Notifications Service  - Jithin, Arathy, Anand
 
 Other tool services:
-11.	Zuul Gateway API server 8765
-12.	Eureka Naming server - 8761 
-13.	Zipkin Distributed Server
+11.	Zuul Gateway API server 8765 -Jithin, Arathy, Anand
+12.	Eureka Naming server - 8761 Done*
+13.	Zipkin Distributed Server - Jithin, Arathy, Anand
 
 
 * marked are mandatory services. Others are small services which may be done if time permits.
