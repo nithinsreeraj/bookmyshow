@@ -8,21 +8,21 @@ public class ShowFilterDTO {
 	public void setMovieId(int movieId) {
 		this.movieId = movieId;
 	}
-	public String getCity() {
-		return city;
+	public int getCityId() {
+		return cityId;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setCityId(int cityId) {
+		this.cityId = cityId;
 	}
-	public java.time.LocalDate getDate() {
-		return date;
+	public java.time.LocalDateTime getShowDateTime() {
+		return showDateTime;
 	}
-	public void setDate(java.time.LocalDate date) {
-		this.date = date;
+	public void setShowDateTime(java.time.LocalDateTime showDateTime) {
+		this.showDateTime = showDateTime;
 	}
 	private int movieId;
-	private String city;
-	private java.time.LocalDate date;
+	private int cityId;
+	private java.time.LocalDateTime showDateTime;
 	
 
 }
