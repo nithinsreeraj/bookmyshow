@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -11,10 +12,12 @@ public class Show {
 	
 	
 	@Id
-	@GeneratedValue
-	private int showId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer showId;
+
 	private int theatreId;
-	private java.time.LocalDateTime showTime;
+
+	private java.time.LocalDateTime showDateTime;
 	// Indicate if Available, Almost full or House Full
 	private String status;
 	private int totalSeats;
@@ -29,7 +32,7 @@ public class Show {
 		super();
 		this.showId = showId;
 		this.theatreId = theatreId;
-		this.showTime = showTime;
+        this.showDateTime = showTime;
 		this.status = status;
 		this.totalSeats = totalSeats;
 		this.availableSeats = availableSeats;
@@ -49,10 +52,10 @@ public class Show {
 		this.theatreId = theatreId;
 	}
 	public java.time.LocalDateTime getShowTime() {
-		return showTime;
+        return showDateTime;
 	}
 	public void setShowTime(java.time.LocalDateTime showTime) {
-		this.showTime = showTime;
+        this.showDateTime = showTime;
 	}
 	public String getStatus() {
 		return status;

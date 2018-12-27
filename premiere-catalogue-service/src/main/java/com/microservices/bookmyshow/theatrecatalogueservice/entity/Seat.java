@@ -1,15 +1,18 @@
 package com.microservices.bookmyshow.theatrecatalogueservice.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Seat {
 	
 	@Id
-	private int seatId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer seatId;
 	private int showId;
-	private int seatName;
+    private String seatName;
 	private int status;
 	private double price;
 	
@@ -18,7 +21,8 @@ public class Seat {
 	}
 	
 	
-	public Seat(int seatId, int showId, int seatName, int status, double price) {
+    public Seat(int seatId, int showId, String seatName, int status, double price)
+    {
 		super();
 		this.seatId = seatId;
 		this.setShowId(showId);
@@ -44,10 +48,13 @@ public class Seat {
 	}
 
 
-	public int getSeatName() {
+    public String getSeatName()
+    {
 		return seatName;
 	}
-	public void setSeatName(int seatName) {
+
+    public void setSeatName(String seatName)
+    {
 		this.seatName = seatName;
 	}
 	public int getStatus() {
