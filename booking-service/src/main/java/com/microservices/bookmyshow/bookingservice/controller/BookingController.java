@@ -1,9 +1,11 @@
 package com.microservices.bookmyshow.bookingservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.microservices.bookmyshow.bookingservice.config.TheatreCatalogueServiceProxy;
 import com.microservices.bookmyshow.bookingservice.dto.SeatBookingDTO;
@@ -29,6 +31,19 @@ public class BookingController
             repo.save(bookingHistory);
         }
         return bookingHistory;
+    }
+
+    @PostMapping("/booking")
+    public BookingHistory confirmSeats2(@RequestBody SeatBookingDTO seatBookingDTO)
+    {
+        
+        ResponseEntity<BookingHistory> responseEntity = new RestTemplate().postForEntity("http://localhost:8100/bookseats", seatBookingDTO, BookingHistory.class);
+        BookingHistory bookingHistory = responseEntity.getBody();
+        if (bookingHistory != null) {
+            repo.save(bookingHistory);
+        }
+        return bookingHistory;
+    
     }
 
 
