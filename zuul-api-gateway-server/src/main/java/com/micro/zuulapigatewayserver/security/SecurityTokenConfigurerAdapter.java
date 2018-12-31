@@ -12,9 +12,11 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.micro.authconfigservice.security.JwtConfig;
+import com.micro.authconfigservice.security.JwtTokenAuthenticationFilter;
+
 
 @EnableWebSecurity
-public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
+public class SecurityTokenConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private JwtConfig jwtConfig;
@@ -26,7 +28,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
 		.and().addFilterAfter(new JwtTokenAuthenticationFilter(jwtConfig), UsernamePasswordAuthenticationFilter.class)
 		.authorizeRequests()
 			.antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
-			.anyRequest().authenticated();
+			.anyRequest().authenticated(); 
 	}
 	
 	@Bean

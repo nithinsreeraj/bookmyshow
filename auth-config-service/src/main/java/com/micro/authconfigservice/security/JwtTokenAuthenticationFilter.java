@@ -1,4 +1,4 @@
-package com.micro.zuulapigatewayserver.security;
+package com.micro.authconfigservice.security;
 
 import java.io.IOException;
 import java.util.List;
@@ -59,9 +59,7 @@ public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
 		} catch (Exception e) {
 			SecurityContextHolder.clearContext();
 		}
-		
 		chain.doFilter(request, response);
-
 	}
 
 }
