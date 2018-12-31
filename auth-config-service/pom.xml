@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.micro</groupId>
-	<artifactId>zuul-api-gateway-server</artifactId>
+	<artifactId>auth-config-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>zuul-api-gateway-server</name>
+	<name>auth-config-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -22,39 +22,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
-		<dependency>
-		  <groupId>org.springframework.boot</groupId>
-		  <artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-		  <groupId>io.jsonwebtoken</groupId>
-		  <artifactId>jjwt</artifactId>
-		  <version>0.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.micro</groupId>
-			<artifactId>auth-config-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
