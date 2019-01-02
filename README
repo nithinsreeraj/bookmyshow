@@ -25,3 +25,8 @@ Other tools/services:
 2. Kafka
 3. GitHub for collab
 
+Thoughts for microservices:
+1. Any functionality that has a faster rate of change, newer implementations etc. can be a candidate for microservice. 
+For example, inventory might not change but listing/aggregation services are scalable. So Movie Service and Movie Catalogue service 
+can be different.
+2. Independent scalability.
