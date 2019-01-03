@@ -2,6 +2,11 @@ package com.microservices.bookmyshow.theatrecatalogueservice.dto;
 
 public class ShowFilterDTO {
 	
+	
+	private int movieId;
+	private int cityId;
+	
+	
 	public int getMovieId() {
 		return movieId;
 	}
@@ -14,15 +19,7 @@ public class ShowFilterDTO {
 	public void setCityId(int cityId) {
 		this.cityId = cityId;
 	}
-	public java.time.LocalDateTime getShowDateTime() {
-		return showDateTime;
-	}
-	public void setShowDateTime(java.time.LocalDateTime showDateTime) {
-		this.showDateTime = showDateTime;
-	}
-	private int movieId;
-	private int cityId;
-	private java.time.LocalDateTime showDateTime;
+	
 	
 
 }

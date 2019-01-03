@@ -2,20 +2,25 @@ package com.microservices.bookmyshow.theatrecatalogueservice.entity;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Show {
 	
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(updatable= false, nullable = false)
 	private int showId;
 	private int theatreId;
 	private java.time.LocalDateTime showTime;
 	// Indicate if Available, Almost full or House Full
+	@Transient
 	private String status;
 	private int totalSeats;
 	private int availableSeats;

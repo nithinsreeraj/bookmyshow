@@ -1,14 +1,21 @@
 package com.microservices.bookmyshow.theatrecatalogueservice.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="theatre")
 public class Theatre {
 	@Id
+	@Column(name="theatre_id")
 	private int theatreId;
+	@Column(name="theatre_name")
 	private String theatreName;
+	@Column(name="city_id")
 	private int cityId;
+	@Column(name="movie_id")
 	private int movieId;
 	
 	public Theatre() {
