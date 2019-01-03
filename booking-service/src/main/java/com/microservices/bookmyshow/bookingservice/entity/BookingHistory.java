@@ -26,10 +26,9 @@ public class BookingHistory
 
     }
 
-    public BookingHistory(int bookingId, int showId, String userName, double totalCost, LocalDateTime bookingTime, int numberOfTickets)
+    public BookingHistory(int showId, String userName, double totalCost, LocalDateTime bookingTime, int numberOfTickets)
     {
         super();
-        this.bookingId = bookingId;
         this.showId = showId;
         this.userName = userName;
         this.totalCost = totalCost;
@@ -37,12 +36,12 @@ public class BookingHistory
         this.numberOfTickets = numberOfTickets;
     }
 
-    public int getBookingId()
+    public Integer getBookingId()
     {
         return bookingId;
     }
 
-    public void setBookingId(int bookingId)
+    public void setBookingId(Integer bookingId)
     {
         this.bookingId = bookingId;
     }

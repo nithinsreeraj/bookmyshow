@@ -61,6 +61,7 @@ public class ShowController {
         }
         double totalCost = selectedSeats.stream().mapToDouble(seat -> seat.getPrice()).sum();
         selectedSeats.stream().forEach(seat -> seat.setStatus(1));
+        selectedSeats.stream().forEach(seat -> seatRepo.save(seat));
         BookingDetailsDTO bookingDetails = new BookingDetailsDTO(seatInfoDTO.getShowId(), "test user", totalCost, java.time.LocalDateTime.now(), selectedSeats.size());
         return bookingDetails;
         

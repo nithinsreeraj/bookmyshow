@@ -23,14 +23,15 @@ public class BookingController
     private BookingServiceRepository repo;
 
     @PostMapping("/book")
-    public BookingHistory confirmSeats(@RequestBody SeatBookingDTO seatBookingDTO)
+    public Object confirmSeats(@RequestBody SeatBookingDTO seatBookingDTO)
     {
         seatBookingDTO.setStatus(1);
         BookingHistory bookingHistory = proxy.bookSeats(seatBookingDTO);
         if (bookingHistory != null) {
             repo.save(bookingHistory);
+            return bookingHistory;
         }
-        return bookingHistory;
+        return "Selected seats are no longer available";
     }
 
     @PostMapping("/booking")
