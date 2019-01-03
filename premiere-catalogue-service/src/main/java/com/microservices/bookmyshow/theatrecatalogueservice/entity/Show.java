@@ -17,8 +17,10 @@ public class Show {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column(updatable= false, nullable = false)
 	private int showId;
+
 	private int theatreId;
-	private java.time.LocalDateTime showTime;
+
+	private java.time.LocalDateTime showDateTime;
 	// Indicate if Available, Almost full or House Full
 	@Transient
 	private String status;
@@ -34,7 +36,7 @@ public class Show {
 		super();
 		this.showId = showId;
 		this.theatreId = theatreId;
-		this.showTime = showTime;
+        this.showDateTime = showTime;
 		this.status = status;
 		this.totalSeats = totalSeats;
 		this.availableSeats = availableSeats;
@@ -54,10 +56,10 @@ public class Show {
 		this.theatreId = theatreId;
 	}
 	public java.time.LocalDateTime getShowTime() {
-		return showTime;
+        return showDateTime;
 	}
 	public void setShowTime(java.time.LocalDateTime showTime) {
-		this.showTime = showTime;
+        this.showDateTime = showTime;
 	}
 	public String getStatus() {
 		return status;
