@@ -7,11 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.microservices.bookmyshow.theatrecatalogueservice.entity.Show;
-import com.microservices.bookmyshow.theatrecatalogueservice.entity.Theatre;
 
+public interface ShowRepository extends JpaRepository<Show, Long>{
+	
+	@Query(" select showId, theatreId, showDateTime, totalSeats, availableSeats from Show s where s.theatreId = :theatreId")
+	public List<Show> getShowList(@Param("theatreId") int theatreId);
 
-public interface TheatreRepository extends JpaRepository<Theatre, Integer>{
-	
-	public List<Theatre> findByCityIdAndMovieId(int cityId, int movieId);
-	
+	public List<Show> findByTheatreId(int theatreId);
+
 }
