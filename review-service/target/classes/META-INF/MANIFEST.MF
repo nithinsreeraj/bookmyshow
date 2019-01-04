@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: review-service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ArunOB
+Implementation-Vendor-Id: com.microservices.bookmyshow
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/review-service
+Created-By: Maven Integration for Eclipse
+
