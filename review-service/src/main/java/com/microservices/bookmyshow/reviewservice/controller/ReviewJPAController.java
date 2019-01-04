@@ -41,8 +41,9 @@ public class ReviewJPAController {
 	}
 	
 	//adding a review
-	@PostMapping("/movie/reviews")
-	public ResponseEntity<Object> createReview(@Valid @RequestBody Review reviews) {
+	@PostMapping("/movie/{id}/reviews")
+	public ResponseEntity<Object> createReview(@Valid @RequestBody Review reviews ,@PathVariable int id) {
+		reviews.setMovieId(id);
 		review = repository.save(reviews);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}

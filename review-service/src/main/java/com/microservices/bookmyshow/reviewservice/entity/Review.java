@@ -11,6 +11,8 @@ import javax.validation.constraints.Min;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Component
 public class Review {
@@ -18,6 +20,8 @@ public class Review {
 	@Id
 	@GeneratedValue
 	public Integer reviewId;
+	
+	@JsonIgnore
 	public Integer movieId;
 	public Integer userId;	
 
