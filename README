@@ -14,11 +14,10 @@ Nithin, Gautham:
 3. Payment Service* - 8300, 8301.. -> Makes use of wallet ids and external payment gateway to confirm payment transaction.
 
 Gopika, Arun:
-1. Movie Catalogue Service* - 8080, 8081.. -> List of movies in a city
-2. Rating Calculation Service: 8400 -> Responsible for calculating average movie ratings, statistical calculation etc..
-3. Wallet Service - 8500 -> Lists out the wallets available for a user
-4. Movie Reviews Service -> Stores movie reviews / CRUD operations on movie reviews / Stores movie ratings, upvotes etc..
-	
+1. Movie Catalogue Service* - 8080, 8081.. -> Lists out the movies available in a city.
+2. Review Service: 8400 -> Stores movie reviews / CRUD operations on movie reviews / stores and calculates avg movie ratings, upvotes etc.
+3. Wallet Service - 8500 -> Lists out the wallets available for a user.
+4. Movie Service- 8600 -> Lists out the details of a particular movie. 	
 
 Other tools/services:
 1. Eureka Naming Server on 8765
